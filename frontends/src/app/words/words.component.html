@@ -1,0 +1,41 @@
+<div class="category flex-container">
+  <div class="boxers flex-container " (click)="choice = 'box'" [ngClass]="choice == 'box' ? 'active' : 'inactive'">
+    BOX
+  </div>
+  <div class="nba flex-container" (click)="choice = 'nba'" [ngClass]="choice == 'nba' ? 'active' : 'inactive'">
+    NBA
+  </div>
+  <div class="marvel flex-container" (click)="choice = 'marvel'" [ngClass]="choice == 'marvel' ? 'active' : 'inactive'">
+    MARVEL
+  </div>
+</div>
+<h2 class="my-4 text-center">Pick the topic and solve it</h2>
+<div class="hiscore">HISCORE: {{ hiscore }}</div>
+<div class="start flex-container" (click)="startGame()">START</div>
+<div class="score-container" *ngIf="start">
+  <div class="score" *ngIf="timer" [ngStyle]="{ 'background-color': warning ? 'red' : 'mediumblue' }">
+    {{ timer }}
+  </div>
+</div>
+<div class="jumbotron" *ngIf="winner">
+  <h1>WIN!!!</h1>
+  <h3>
+    <p *ngIf="record">NEW HISCORE: {{ hiscore }}</p>
+    <p *ngIf="!record">YOUR SCORE: {{ score }}</p>
+  </h3>
+</div>
+<div class="jumbotron" *ngIf="gameover">
+  <h1>GAME OVER</h1>
+</div>
+
+<div class="question">
+  <div *ngFor="let char of question" class="wrap-char" [ngClass]="{ empty: char == ' ' }">
+    <div *ngIf="bingo[char]">{{ char }}</div>
+  </div>
+</div>
+<br />
+<div class="alphabet-wrapper">
+  <div class="d-inline-block" *ngFor="let char of alphabet">
+    <div class="alphabet" (click)="checkChar(char)" [ngStyle]="changeColor(char, bingo)">{{ char }}</div>
+  </div>
+</div>

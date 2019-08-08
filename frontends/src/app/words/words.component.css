@@ -1,0 +1,141 @@
+.category {
+  display: flex;
+  flex-direction: row;
+}
+
+.boxers,
+.nba,
+.marvel {
+  width: 260px;
+  height: 40px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 20px;
+  border-radius: 0px 0px 10px 10px;
+}
+.active {
+  background-color: greenyellow;
+  color: black;
+}
+.inactive {
+  background-color: blue;
+  color: white;
+}
+
+.question {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.wrap-char {
+  width: 50px;
+  height: 45px;
+  border: 2px solid black;
+  background: greenyellow;
+  margin-left: 10px;
+  cursor: pointer;
+  margin-bottom: 50px;
+  font-size: 1.5rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bingo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.chars {
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  color: greenyellow;
+}
+
+.empty {
+  border: none;
+  height: 0px;
+  padding: 0px;
+}
+.alphabet-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.alphabet {
+  width: 40px;
+  height: 40px;
+  border: 2px solid blue;
+  background: blue;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.alphabet:hover {
+  background: white;
+  color: blue;
+}
+
+.start {
+  border-radius: 50%;
+  font-size: 1.5rem;
+  width: 100px;
+  height: 100px;
+  background-color: greenyellow;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.start:hover {
+  background-color: red;
+  border: 5px solid greenyellow;
+  color: white;
+}
+
+.jumbotron {
+  padding: 1rem 1rem;
+  background-color: blue;
+  margin-top: 20px;
+  color: white;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.score-container {
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.score {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: mediumblue;
+  color: white;
+  margin: 0 auto;
+  padding-top: 3px;
+}
+.hiscore {
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .empty {
+    flex-basis: 100%;
+    height: 0;
+    margin-top: -160px;
+  }
+}
